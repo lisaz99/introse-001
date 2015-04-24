@@ -11,3 +11,4 @@ SET `achievement_level_new` = (
                         WHEN achievement_level = 'distinction' THEN 'Distinction'
                         ELSE NULL
             END)
+# updated the table in MySQL 24Apr2015
