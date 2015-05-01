@@ -1,1 +1,19 @@
-
+create table lisa_data_user_attributes_1may15 as 
+SELECT data_users_attributes.session_user_id, 
+	data_users_attributes.registration_time, 
+    From_unixtime(data_users_attributes.registration_time) as registration_time_unix,
+	data_users_attributes.access_group_id, 
+	data_users_attributes.access_group_id_name, 
+	data_users_attributes.in_clickstream, 
+	data_users_attributes.in_signature_track, 
+	data_users_attributes.in_signature_track_registration_time, 
+	data_users_attributes.in_signature_track_financial_aid, 
+	data_users_attributes.unenrolled, 
+	data_users_attributes.registered_before_course_started, 
+	data_users_attributes.registered_before_course_ended, 
+	data_users_attributes.registered_before_course_closed, 
+	data_users_attributes.achievement_level, 
+	data_users_attributes.achievement_level_new, 
+	data_users_attributes.normal_grade, 
+	data_users_attributes.distinction_grade
+FROM data_users_attributes
